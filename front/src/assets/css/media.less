@@ -1,0 +1,117 @@
+/*Media Query*/
+@media only screen and (max-width: 991px) {
+  .m-d-block {
+    display: block !important;
+  }
+  .m-p-0 {
+    padding: 0px;
+  }
+  .m-m-0 {
+    margin: 0px !important;
+  }
+  .m-ml-0 {
+    margin-left: 0px;
+  }
+  .ant-breadcrumb {
+    padding: 0 14px !important;
+  }
+  .left-heading-right-button {
+    display: block;
+  }
+  .filter-sec {
+    display: block !important;
+    .ant-space-item {
+      &:last-child {
+        display: block;
+        margin-right: 0px !important;
+        padding: 0px 14px;
+        margin-bottom: 14px !important;
+      }
+    }
+    .search-input {
+      width: 90% !important;
+      margin-left: 14px !important;
+    }
+  }
+  #mapBox {
+    height: 200px !important;
+  }
+  .grid-list-section .ant-tabs-nav .ant-tabs-tab {
+    margin-top: 2px !important;
+  }
+  .filterBox {
+    .ant-col {
+      margin-bottom: 5px;
+      margin-left: initial;
+      display: block !important;
+      width: 100%;
+      &:nth-of-type(1) {
+        padding-left: 6px !important;
+      }
+    }
+  }
+  .content-body {
+    .ant-row {
+      .ant-col {
+        .bg-white {
+          margin: 0px 14px 14px 14px !important;
+          padding: 14px !important;
+        }
+      }
+    }
+  }
+  .p-table {
+    .ant-table-content {
+      overflow: auto hidden;
+    }
+  }
+  #Dashboard .dashboard-left-box .card-header {
+    padding: 14px 14px 113px 14px !important;
+  }
+  #Dashboard .store-information-box .card-header h2 {
+    line-height: inherit;
+  }
+  #Dashboard .store-information-box .card-header .stock-box {
+    align-items: flex-start;
+  }
+  #Dashboard .store-information-box .d-flex.justify-content-between {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .left-heading-right-button {
+    display: flex;
+  }
+  .filterBox {
+    .ant-col {
+      width: auto;
+      margin-right: 5px !important;
+      &:nth-of-type(1) {
+        padding-left: 0px !important;
+      }
+    }
+  }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .left-heading-right-button {
+    display: flex;
+  }
+  .filterBox {
+    .ant-col {
+      width: auto;
+      &:nth-of-type(1) {
+        padding-left: 0px !important;
+      }
+    }
+  }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  .filterBox {
+    .ant-col {
+      width: auto;
+      &:nth-of-type(1) {
+        padding-left: 6px !important;
+      }
+    }
+  }
+}

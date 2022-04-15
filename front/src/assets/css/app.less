@@ -1,0 +1,296 @@
+@import "~antd/dist/antd.less";
+@import "./common.less";
+@import "./media.less";
+@import "./button.less";
+
+/*Layout*/
+.ant-layout.site-layout {
+  padding-left: 286px;
+}
+
+/*Filter*/
+.filter-sec {
+  .ant-space-item {
+    &:last-child {
+      margin-right: 14px;
+      margin-top: 3px;
+    }
+  }
+  .btn-primary {
+    background-color: @primary-color;
+    color: #fff;
+    box-shadow: 0 2px #0000000b;
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid transparent;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    &:hover {
+      color: #fff;
+      background: @primary-color-hover;
+      border-color: @primary-color-hover;
+    }
+  }
+}
+.inner-filter-sec {
+  .ant-space-item {
+    &:last-child {
+      margin-left: inherit !important;
+      margin-right: 14px;
+      margin-top: 0px !important;
+    }
+    &:nth-last-child(2) {
+      margin-left: auto !important;
+    }
+  }
+}
+
+/*Search*/
+.search-input {
+  /*border: 0px!important;*/
+  padding: 4px 8px !important;
+  width: 230px !important;
+}
+
+/*Filter Dropdown*/
+.locationSelect {
+  .ant-select-selection-overflow-item:nth-of-type(1) {
+    width: 60% !important;
+  }
+}
+.locationDropdown {
+  span {
+    color: @primary-color;
+  }
+}
+
+/*Empty*/
+.emptyBox {
+  .ant-row {
+    align-content: center;
+    height: 100%;
+  }
+  .emptyMessageBox {
+    background-color: #fff;
+    border-radius: 14px;
+    p {
+      color: @text-color!important;
+    }
+  }
+}
+
+/*Grid & List View*/
+.grid-list-section {
+  .ant-tabs-nav {
+    position: absolute !important;
+    top: -50px;
+    right: 13px;
+    .ant-tabs-tab {
+      background-color: #fff;
+      padding: 2px 8px;
+      margin-left: 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      &.ant-tabs-tab-active {
+        background-color: @primary-color;
+        span {
+          color: #fff;
+        }
+      }
+      .anticon {
+        margin-right: 0px;
+      }
+    }
+    .ant-tabs-ink-bar {
+      background: transparent;
+    }
+  }
+}
+
+/*Table*/
+.p-table-panel {
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 4px;
+}
+.p-table {
+  background-color: white;
+  table {
+    tr {
+      &:hover td {
+        background-color: @bg-row-highlightcolor!important;
+        .fw-600 {
+          color: @primary-color;
+        }
+        .badge.linked {
+          background-color: @primary-color;
+          color: #fff;
+        }
+        .badge.unlinked {
+          background-color: @error-color;
+          color: #fff;
+        }
+        .ant-btn-primary {
+          background-color: @primary-color;
+          color: #fff;
+        }
+      }
+      th {
+        .p-x8-y16;
+        /*background-color: #fff;
+        &:first-child{
+          padding-left: 0px;
+        }
+        &:last-child{
+          padding-right: 0px;
+        }*/
+        .ant-table-column-sorters,
+        .ant-table-column-has-sorters {
+          padding: 0px !important;
+        }
+      }
+      &:last-child td {
+        .br-b-0();
+      }
+      td {
+        .p-x6-y16;
+        .badge {
+          .badge-sm;
+          text-transform: capitalize;
+          &.linked {
+            background-color: @bg-color-ligher-gray;
+            color: @primary-color;
+          }
+          &.unlinked {
+            background-color: @bg-danger;
+            color: @text-danger;
+          }
+
+          &.initiated {
+            background-color: @bg-info;
+            color: @text-info;
+          }
+          &.started {
+            background-color: @bg-success;
+            color: @text-success;
+          }
+          &.ended {
+            background-color: @bg-danger;
+            color: @text-danger;
+          }
+        }
+        span.badge-sm {
+          background-color: #eee;
+          color: #000;
+        }
+        img {
+          padding: 8px;
+          background-color: @bg-color-light-gray;
+          border-radius: 0.475rem;
+        }
+        &.pl-0 {
+          padding-left: 0px !important;
+        }
+        &.pr-0 {
+          padding-right: 0px !important;
+        }
+        .ant-btn-primary {
+          background-color: @bg-color-ligher-gray;
+          color: @primary-color;
+          border-color: @bg-color-ligher-gray;
+          height: 26px;
+          border-radius: 6px;
+          box-shadow: none;
+          .fs-08;
+        }
+        .short-name {
+          background-color: @primary-color;
+          padding: 8px 11px;
+          border-radius: 50%;
+          font-weight: 600;
+          color: #fff;
+          display: inline-block;
+        }
+        span {
+          &:last-child {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Status Lable*/
+.status-label {
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  width: 80px;
+  display: block;
+  &.status-approved {
+    background-color: @bg-color-ligher-gray;
+    color: @primary-color;
+    border-color: @bg-color-ligher-gray;
+  }
+  &.status-rejected {
+    background-color: @bg-danger;
+    color: @text-danger;
+    border-color: @bg-danger;
+  }
+  &.status-pending {
+    background-color: @bg-warning;
+    color: @text-warning;
+    border-color: @bg-warning;
+  }
+}
+
+/*Badge*/
+.badge {
+  text-transform: capitalize;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  &.linked {
+    background-color: @bg-color-ligher-gray;
+    color: @primary-color;
+  }
+  &.unlinked {
+    background-color: @bg-danger;
+    color: @text-danger;
+  }
+  &.initiated {
+    background-color: @text-info;
+    color: #fff;
+  }
+  &.started {
+    background-color: @text-success;
+    color: #fff;
+  }
+  &.ended {
+    background-color: @text-danger;
+    color: #fff;
+  }
+}
+
+/*Timeline*/
+.ant-timeline-item {
+  padding-bottom: 19px !important;
+}
+.ant-timeline-item-last {
+  padding-bottom: 0px !important;
+  .ant-timeline-item-content {
+    min-height: 0px !important;
+    padding-bottom: 1px !important;
+  }
+}
